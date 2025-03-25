@@ -8,7 +8,12 @@ function linear(t){
     return -1
 }
 
-console.log(linear(6));
-console.log(linear(10));
-console.log(linear(11));
+console.log(lin([1,2,3,4,5,6],6));
 
+
+function lin(arr,t){
+    for(i=0;i<arr.length;i++){
+        if(arr[i] === t) return i
+    }
+    return -1;
+}

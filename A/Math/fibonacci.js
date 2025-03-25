@@ -14,16 +14,12 @@
 // console.log(fibunacci(6)); 
 // console.log(fibunacci(8)); 
 
-
-
 function fibonacci(n) {
-
-    let num1 = [0, 1];
-    for (let i = 2; i < n; i++) {    //O(n)
-        let fib = num1[i - 1] + num1[i - 2];
-        num1.push(fib);  
+    let num1 = [0, 1];  
+    for (let i = 2; i < n; i++) {                //O(n)
+        num1.push(num1[i - 1] + num1[i - 2]); 
     }
-    return num1;  
+   return num1.slice(0,n);  
 }
 
 // console.log(fibonacci(7));
@@ -35,8 +31,7 @@ function recfibo(n){
     if( n < 2){
         return n
     }
-
-    return  num = recfibo(n-1)+recfibo(n-2);    
+    return  num = recfibo(n-1) + recfibo(n-2);    
 }
 
-console.log(recfibo(7));
+console.log(fibonacci(7));
